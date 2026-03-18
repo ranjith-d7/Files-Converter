@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal File Converter</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --bg-gradient: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .converter-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 { color: #333; margin-bottom: 20px; }
+        .file-input-wrapper { margin: 20px 0; }
+        input[type="file"] {
+            padding: 10px;
+            background: #f3f4f6;
+            border-radius: 8px;
+            width: 90%;
+        }
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        button:hover { background-color: var(--primary-hover); }
+        #statusMessage { margin-top: 20px; font-weight: 500; color: #555; }
+    </style>
+</head>
+<body>
+    <div class="converter-card">
+        <h2>File Converter 🔄</h2>
+        <p>Currently supporting: PDF ➡️ Word</p>
+        
+        <form id="converterForm">
+            <div class="file-input-wrapper">
+                <input type="file" id="pdfInput" accept=".pdf" required>
+            </div>
+            <button type="submit" id="convertBtn">Convert File</button>
+        </form>
+        
+        <p id="statusMessage"></p>
+    </div>
+
+    <script>
+        // Keep your exact existing JavaScript here!
+        // It connects perfectly to this new form.
+    </script>
+</body>
+</html>
